@@ -475,6 +475,8 @@ claude-code "Bu bug raporu için fix uygula: bug-report-2026-05-14.md"
 **Disiplin:** widget tek başına auto-repair loop'u çalıştırmaz. Bu host'un, CI pipeline'ının veya geliştiricinin tetiklediği bir agent komutunun sorumluluğudur. Widget'ın sorumluluğu agent için **ilk-sınıf input** üretmektir — JSON payload yerine doğal dilde, görsel kanıtla.
 
 > Detaylı kavramsal açıklama: [`IDEA.md` § Coding agent ve auto-repair loop](./IDEA.md)
+>
+> Otonom onarım döngüsünün tam spesifikasyonu: [`nokta-forge.md`](./nokta-forge.md) — Karpathy autoresearch ratchet loop disipliniyle `READ → LOCATE → HYPOTHESIZE → REPAIR → TEST → VERIFY → COMMIT` zincirini tanımlar.
 
 ---
 
@@ -554,6 +556,7 @@ nokta-audit/
 ├── package.json              # @xtatistix/mobile-audit v0.1.0
 ├── tsconfig.json
 ├── IDEA.md                   # Kavramsal kaynak — örüntü, sınırlar, kristalize kararlar
+├── nokta-forge.md            # Otonom onarım döngüsü — Karpathy ratchet loop spesifikasyonu
 ├── README.md                 # Bu dosya — pratik kullanım + API
 └── src/
     ├── index.ts              # Public barrel export
@@ -586,6 +589,8 @@ Bu paketin **neden** bu şekilde tasarlandığı, hangi sınırların korunması
 - *tour-agent ile bidirectional replay* — müşteri ve developer aynı akışı nasıl replay eder
 - *Drop-in prensibi* — self-contained vs composed mod, host application boundary
 - *Not* — kristalize edilmiş mimari kararlar
+
+→ **[nokta-forge.md](./nokta-forge.md)** — nokta-audit'in ürettiği raporları tüketen otonom onarım döngüsü spesifikasyonu. Karpathy ratchet loop disipliniyle host uygulamada `READ → LOCATE → HYPOTHESIZE → REPAIR → TEST → VERIFY → COMMIT` zincirini tanımlar. nokta-audit **yakalama** tarafıdır; nokta-forge **onarım ve inşa** tarafıdır.
 
 README pratik kullanım dokümanıdır; herhangi bir çelişki durumunda `IDEA.md` üst sözleşmedir.
 
