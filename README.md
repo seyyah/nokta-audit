@@ -1,5 +1,7 @@
 # 🐛 nokta-audit
 
+![nokta-audit — Mobile bug reporting widget for React Native / Expo](./docs/assets/nokta-audit.png)
+
 > `@xtatistix/mobile-audit` — React Native / Expo uygulamalarına gömülen **drop-in bir bug-raporlama primitif'i**.
 
 Sürüklenebilir bir FAB üzerinden ekranı yakalar, sorunlu alanı parmakla işaretletir, notu insan dilinde tutar ve Markdown / Word artifakta çevirir. Backend yok, hesap yok, telemetri yok — host uygulamanın kararıyla yaşar, host uygulamanın depolama mekanizmasıyla çalışır.
